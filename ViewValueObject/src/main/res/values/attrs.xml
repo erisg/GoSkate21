@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EditTextImageView">
+        <attr name="isRequired" format="boolean" />
+        <attr name="imageHint" format="string" />
+        <attr name="heightContent" format="integer" />
+        <attr name="type" format="enum">
+            <enum name="clock" value="0" />
+            <enum name="calendar" value="1" />
+            <enum name="search" value="2" />
+            <enum name="ok" value="3" />
+        </attr>
+        <attr name="inputTypeText" format="enum">
+            <enum name="number" value="0" />
+            <enum name="text" value="1" />
+            <enum name="name" value="2" />
+            <enum name="phone" value="3" />
+            <enum name="email" value="4" />
+        </attr>
+        <attr name="validateType" format="enum">
+            <enum name="document" value="0" />
+            <enum name="birth_date" value="1" />
+            <enum name="last_date" value="2" />
+            <enum name="future_date" value="3" />
+            <enum name="none" value="4" />
+            <enum name="hour" value="5" />
+        </attr>
+        <attr name="maxLengthofEditImageTexts" format="integer" />
+        <attr name="minimum_age" format="integer" />
+        <attr name="maximum_age" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ControlTableView">
+        <attr name="hideHeader" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="EditTextView">
+        <attr name="isRequiredField" format="boolean" />
+        <attr name="isEditable" format="boolean" />
+        <attr name="errorMessage" format="string" />
+        <attr name="hintEditTextView" format="string" />
+        <attr name="maxLengthofEditText" format="integer" />
+        <attr name="typeBackground" format="enum">
+            <enum name="line" value="0" />
+            <enum name="box" value="1" />
+        </attr>
+        <attr name="inputType" format="enum">
+            <enum name="number" value="0" />
+            <enum name="text" value="1" />
+            <enum name="name" value="2" />
+            <enum name="phone" value="3" />
+            <enum name="email" value="4" />
+        </attr>
+        <attr name="validationType" format="enum">
+            <enum name="name" value="0" />
+            <enum name="phone" value="1" />
+            <enum name="email" value="2" />
+            <enum name="none" value="3" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="AutoCompleteEditTextView">
+        <attr name="isRequiredFields" format="boolean" />
+        <attr name="isEditables" format="boolean" />
+        <attr name="errorMessages" format="string" />
+        <attr name="hintEditTextViews" format="string" />
+        <attr name="maxLengthofEditTexts" format="integer" />
+        <attr name="typeBackgrounds" format="enum">
+            <enum name="line" value="0" />
+            <enum name="box" value="1" />
+        </attr>
+        <attr name="inputTypes" format="enum">
+            <enum name="number" value="0" />
+            <enum name="text" value="1" />
+            <enum name="name" value="2" />
+            <enum name="phone" value="3" />
+            <enum name="email" value="4" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TitleTextView">
+        <attr name="titleText" format="string" />
+        <attr name="stylo" format="enum">
+            <enum name="title1" value="0" />
+            <enum name="title2" value="1" />
+        </attr>
+        <attr name="positionText" format="enum">
+            <enum name="leftText" value="0" />
+            <enum name="centerText" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ToggleSwitchView">
+        <attr name="drawableBackground" format="enum">
+            <enum name="picture" value="1" />
+            <enum name="tag" value="2" />
+            <enum name="ok" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RadioGroupView">
+        <attr name="messageTextView" format="string" />
+        <attr name="isRadioRequired" format="boolean" />
+        <attr name="orientationTextView" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="IconButtonView">
+        <attr name="iconButtonView" format="enum">
+            <enum name="camera" value="0" />
+            <enum name="form" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="MenuSketchView">
+        <attr name="lashDrawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SketchFloatingActionButtonView">
+        <attr name="fabBackground" format="reference" />
+        <attr name="isRequiredFab" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="HintSpinnerView">
+        <attr name="hintSpinner" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SvgButtonView">
+        <attr name="svgimage" format="reference" />
+        <attr name="svgtext" format="string" />
+        <attr name="svgtextSize" format="float" />
+        <attr name="orientationText" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ShadowBorderButtonView">
+        <attr name="sbbackground" format="reference" />
+        <attr name="sbtextSize" format="float" />
+        <attr name="typeButtonView" format="enum">
+            <enum name="darkBlue" value="0" />
+            <enum name="darkGray" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="LargeSketchButtonView">
+        <attr name="sbBackground" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="LeftMenuView">
+        <attr name="backgroundDarkTransparent" format="string" />
+    </declare-styleable>
+</resources>
