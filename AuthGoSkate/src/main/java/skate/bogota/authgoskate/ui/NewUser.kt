@@ -1,23 +1,14 @@
 package skate.bogota.authgoskate.ui
 
+
 import android.os.Bundle
-import android.renderscript.Sampler
 import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import kotlinx.android.synthetic.main.newuser.*
-import retrofit2.Callback
-import skate.bogota.authgoskate.Presenter
 import skate.bogota.authgoskate.R
-import skate.bogota.authgoskate.databinding.ActivityMainBinding
 import skate.bogota.authgoskate.viewModel.AuthViewModel
-import skate.bogota.viewvalueobject.UserVO
-import skate.bogota.webservicegoskate.AuthService.GoSkateRest
-import skate.bogota.webservicegoskate.AuthService.ResponseUser
+
 
 class NewUser : AppCompatActivity(), RadioGroup.OnCheckedChangeListener {
 
@@ -30,7 +21,7 @@ class NewUser : AppCompatActivity(), RadioGroup.OnCheckedChangeListener {
         setContentView(R.layout.newuser)
 
 
-        btnNewuser.setOnClickListener {
+        btnNewusers.setOnClickListener {
 
             var name = nameRegis.text.toString().trim()
             var email = emailNew.text.toString().trim()
@@ -40,17 +31,14 @@ class NewUser : AppCompatActivity(), RadioGroup.OnCheckedChangeListener {
 
 
             if (name.isEmpty()) {
-                nameRegis.error = "Nombre Requerido"
                 nameRegis.requestFocus()
                 return@setOnClickListener
             }
             if (email.isEmpty()) {
-                emailNew.error = "Email Requerido"
                 emailNew.requestFocus()
                 return@setOnClickListener
             }
             if (password.isEmpty()) {
-                passNewU.error = "Contraseña Requerido"
                 passNewU.requestFocus()
                 return@setOnClickListener
             }
@@ -59,12 +47,16 @@ class NewUser : AppCompatActivity(), RadioGroup.OnCheckedChangeListener {
                 Toast.makeText(this, "Genero Requerido", Toast.LENGTH_LONG).show()
             }
             if (age.isEmpty()) {
-                ageUser.error = "Edad Requerido"
                 ageUser.requestFocus()
                 return@setOnClickListener
             }
-            authViewModel.registrerData(name, email ,password , gendeer ,age)
 
+            if(name.isNullOrEmpty() || email.isNullOrEmpty() || password.isNullOrEmpty() || gendeer.isNullOrEmpty() || age.isNullOrEmpty()){
+                Toast.makeText(this.applicationContext, "FALTAN DATOS", Toast.LENGTH_LONG).show()
+            }else{
+                authViewModel.registrerData(name, email ,password , gendeer ,age)
+                Toast.makeText(this.applicationContext, "EXITO", Toast.LENGTH_LONG).show()
+            }
 
 
         }

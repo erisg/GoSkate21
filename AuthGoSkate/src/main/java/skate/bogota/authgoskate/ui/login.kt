@@ -21,8 +21,6 @@ import skate.bogota.authgoskate.R
 class login : AppCompatActivity() {
 
 
-
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)

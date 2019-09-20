@@ -183,7 +183,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
                 <Button
-                    android:id="@+id/btnNewuser"
+                    android:id="@+id/btnNewusers"
                     android:layout_width="141dp"
                     android:layout_height="61dp"
                     android:layout_marginStart="104dp"

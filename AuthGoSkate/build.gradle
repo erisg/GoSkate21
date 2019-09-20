@@ -60,6 +60,7 @@ dependencies {
 
     kapt "com.android.databinding:compiler:3.5.0"
     implementation project(path: ':ViewValueObject')
-    implementation project(path: ':WebServiceGoSkate')
+    implementation project(path: ':GoSkateRepository')
+
 
 }
