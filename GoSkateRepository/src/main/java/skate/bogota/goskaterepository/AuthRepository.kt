@@ -11,6 +11,12 @@ import skate.bogota.webservicegoskate.AuthService.ResponseUser
 class AuthRepository(application: Application)  {
 
 
+    /***
+     * Funcion que recibe informacion del view model para insertar al servicio
+     * @author : Geral
+     * @author: 09/18/2019
+     */
+
     fun registrerData(name : String, email:String, password:String , gendeer:String ,age:String){
 
         GoSkateRest.instance.postUser(name, email , password , gendeer ,age )

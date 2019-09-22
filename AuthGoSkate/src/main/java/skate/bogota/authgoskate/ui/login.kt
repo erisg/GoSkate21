@@ -25,9 +25,50 @@ class login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
-        btnRegistro.setOnClickListener {
-            startActivity(Intent(this,NewUser::class.java))
+
+
+        /**
+         * Valida si el usuario esta registrado si esta registrado ingresa a la apagina de inicio si no muestra un mensaje de indicando que es necesario el registro
+         * @author : Geral
+         * @version : 09/22/2019
+         */
+
+        btnLogin.setOnClickListener {
+            validateLogin()
         }
 
+
+        /**
+         * Inicia actividad para registro de usuario
+         * @author : Geral
+         * @version : 09/10/2019
+         */
+
+
+        btnRegistro.setOnClickListener {
+            startActivity(Intent(this, NewUser::class.java))
+        }
+
+    }
+
+
+    /**
+     *Funcion que valida que los campos esten bien diligenciados
+     * @author : Geral
+     * @version : 09/22/2019
+     */
+
+    fun validateLogin(){
+
+        var email = emailLogin.text.trim()
+        var password = passwordLogin.text.trim()
+
+        if(email.isNullOrEmpty()){
+            Toast.makeText(this.applicationContext, "FALTA EMAIL", Toast.LENGTH_LONG).show()
+        }else if (password.isNullOrEmpty()){
+            Toast.makeText(this.applicationContext, "FALTA PASSWORD", Toast.LENGTH_LONG).show()
+        }else{
+
+        }
     }
 }

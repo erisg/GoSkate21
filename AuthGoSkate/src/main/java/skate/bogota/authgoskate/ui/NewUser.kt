@@ -30,27 +30,6 @@ class NewUser : AppCompatActivity(), RadioGroup.OnCheckedChangeListener {
             var age = ageUser.text.toString().trim()
 
 
-            if (name.isEmpty()) {
-                nameRegis.requestFocus()
-                return@setOnClickListener
-            }
-            if (email.isEmpty()) {
-                emailNew.requestFocus()
-                return@setOnClickListener
-            }
-            if (password.isEmpty()) {
-                passNewU.requestFocus()
-                return@setOnClickListener
-            }
-
-            if (gendeer.isEmpty()) {
-                Toast.makeText(this, "Genero Requerido", Toast.LENGTH_LONG).show()
-            }
-            if (age.isEmpty()) {
-                ageUser.requestFocus()
-                return@setOnClickListener
-            }
-
             if(name.isNullOrEmpty() || email.isNullOrEmpty() || password.isNullOrEmpty() || gendeer.isNullOrEmpty() || age.isNullOrEmpty()){
                 Toast.makeText(this.applicationContext, "FALTAN DATOS", Toast.LENGTH_LONG).show()
             }else{
