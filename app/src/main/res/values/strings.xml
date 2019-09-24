@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GoSkate</string>
+    <string name="name">GOSKATE</string>
+    <string name="new_post">AGREGAR PUBLICACION</string>
 </resources>

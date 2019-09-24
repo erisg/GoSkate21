@@ -33,7 +33,7 @@ interface ServicePost  {
     @FormUrlEncoded
     @POST("api/auth/login")
     fun postUserLogin(@Field("name")email:String,
-                      @Field("password")password:String)
+                      @Field("password")password:String): Call<ResponseUser>
 
 
 }

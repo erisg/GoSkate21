@@ -16,16 +16,16 @@ import helper.PermissionUtils
 import kotlinx.android.synthetic.main.login.*
 
 import skate.bogota.authgoskate.R
+import skate.bogota.authgoskate.viewModel.AuthViewModel
 
 
 class login : AppCompatActivity() {
 
+    private val authViewModel by lazy { AuthViewModel(application) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
-
-
 
         /**
          * Valida si el usuario esta registrado si esta registrado ingresa a la apagina de inicio si no muestra un mensaje de indicando que es necesario el registro
@@ -36,7 +36,6 @@ class login : AppCompatActivity() {
         btnLogin.setOnClickListener {
             validateLogin()
         }
-
 
         /**
          * Inicia actividad para registro de usuario
@@ -51,7 +50,6 @@ class login : AppCompatActivity() {
 
     }
 
-
     /**
      *Funcion que valida que los campos esten bien diligenciados
      * @author : Geral
@@ -60,15 +58,16 @@ class login : AppCompatActivity() {
 
     fun validateLogin(){
 
-        var email = emailLogin.text.trim()
-        var password = passwordLogin.text.trim()
+        var email = emailLogin.text.toString().trim()
+        var password = passwordLogin.text.toString().trim()
 
         if(email.isNullOrEmpty()){
             Toast.makeText(this.applicationContext, "FALTA EMAIL", Toast.LENGTH_LONG).show()
         }else if (password.isNullOrEmpty()){
             Toast.makeText(this.applicationContext, "FALTA PASSWORD", Toast.LENGTH_LONG).show()
         }else{
-
+            Toast.makeText(this.applicationContext, "EXITO", Toast.LENGTH_LONG).show()
+            authViewModel.infoLoginUser(email , password)
         }
     }
 }

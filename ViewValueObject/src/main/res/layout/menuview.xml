@@ -7,9 +7,14 @@
     android:layout_height="match_parent">
 
 
+
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu"
         android:layout_width="416dp"
         android:layout_height="53dp"
+        android:background="@color/colorPrimaryDark"
+        app:itemTextColor="@color/colorRadio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"

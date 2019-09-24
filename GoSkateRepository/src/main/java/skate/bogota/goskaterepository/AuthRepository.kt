@@ -2,6 +2,7 @@ package skate.bogota.goskaterepository
 
 import android.app.Application
 import android.util.Log
+import android.widget.Toast
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -31,6 +32,33 @@ class AuthRepository(application: Application)  {
                     response: Response<ResponseUser>
                 ) {
                     Log.w("FFF","${response.body()?.message}")
+                }
+
+            })
+    }
+
+
+
+    /***
+     * Funcion que recibe informacion del view model para insertar al servicio de Login
+     * @author : Geral
+     * @author: 09/20/2019
+     */
+
+    fun lgoginUser(email:String, password:String){
+
+        GoSkateRest.instance.postUserLogin(email,password)
+            .enqueue(object : Callback<ResponseUser>{
+
+                override fun onFailure(call: Call<ResponseUser>, t: Throwable) {
+                    Log.w("UUU","${t.message}")
+                }
+
+                override fun onResponse(
+                    call: Call<ResponseUser>,
+                    response: Response<ResponseUser>
+                ) {
+                    Log.w("UUU","${response.message()}")
                 }
 
             })

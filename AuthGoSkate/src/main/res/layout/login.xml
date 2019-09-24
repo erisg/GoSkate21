@@ -45,6 +45,8 @@
                 android:gravity="center"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
+                android:textColor="#000"
+                android:textColorHint="#000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -63,6 +65,8 @@
                 android:gravity="center"
                 android:hint="Contraseña"
                 android:inputType="textPassword"
+                android:textColor="#000"
+                android:textColorHint="#000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/emailLogin" />

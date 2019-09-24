@@ -28,7 +28,7 @@ class AuthViewModel(application: Application) : AndroidViewModel(application) {
      */
 
     fun infoLoginUser(email: String , password: String){
-
+        this.authRepository.lgoginUser(email, password)
     }
 
 }
