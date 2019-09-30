@@ -10,14 +10,14 @@ import android.os.Looper
 import androidx.annotation.RequiresApi
 import helper.PermissionUtils
 import helper.permissions.Networks
-import skate.bogota.authgoskate.ui.login
+import skate.bogota.authgoskate.ui.Login
 
 class MainActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        startActivity(Intent(this, login::class.java))
+        startActivity(Intent(this, Login::class.java))
         finish()
 
         validateInternet()

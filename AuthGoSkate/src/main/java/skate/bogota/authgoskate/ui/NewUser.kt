@@ -25,14 +25,15 @@ class NewUser : AppCompatActivity() {
             var name = nameRegis.text.toString().trim()
             var email = emailNew.text.toString().trim()
             var password = passNewU.text.toString().trim()
+            var gendeer = "f"
             var age = ageUser.text.toString().trim()
 
 
 
-            if(name.isNullOrEmpty() || email.isNullOrEmpty() || password.isNullOrEmpty() || gender.isNullOrEmpty() || age.isNullOrEmpty()){
+            if(name.isNullOrEmpty() || email.isNullOrEmpty() || password.isNullOrEmpty()|| gendeer.isNullOrEmpty() || age.isNullOrEmpty()){
                 Toast.makeText(this.applicationContext, "FALTAN DATOS", Toast.LENGTH_LONG).show()
             }else{
-                authViewModel.registrerData(name, email ,password , gender ,age)
+                authViewModel.registrerData(name, email ,password , gendeer ,age)
                 Toast.makeText(this.applicationContext, "EXITO", Toast.LENGTH_LONG).show()
             }
 

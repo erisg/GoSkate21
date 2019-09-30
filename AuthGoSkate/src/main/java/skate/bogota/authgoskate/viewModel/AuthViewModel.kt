@@ -22,7 +22,7 @@ class AuthViewModel(application: Application) : AndroidViewModel(application) {
 
 
     /**
-     * Funcion que trae info del login de usuario y la envia a el repository
+     * Funcion que trae info del Login de usuario y la envia a el repository
      * @author : Geral
      * @version : 09/22/2019
      */

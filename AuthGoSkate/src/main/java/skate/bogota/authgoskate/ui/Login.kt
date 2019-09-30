@@ -19,7 +19,7 @@ import skate.bogota.authgoskate.R
 import skate.bogota.authgoskate.viewModel.AuthViewModel
 
 
-class login : AppCompatActivity() {
+class Login : AppCompatActivity() {
 
     private val authViewModel by lazy { AuthViewModel(application) }
 
@@ -66,7 +66,6 @@ class login : AppCompatActivity() {
         }else if (password.isNullOrEmpty()){
             Toast.makeText(this.applicationContext, "FALTA PASSWORD", Toast.LENGTH_LONG).show()
         }else{
-            Toast.makeText(this.applicationContext, "EXITO", Toast.LENGTH_LONG).show()
             authViewModel.infoLoginUser(email , password)
         }
     }

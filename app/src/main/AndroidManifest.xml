@@ -20,10 +20,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="skate.bogota.authgoskate.ui.login"
+        <activity android:name="skate.bogota.authgoskate.ui.Login"
             android:windowSoftInputMode="stateHidden"/>
 
         <activity android:name="skate.bogota.authgoskate.ui.NewUser"
+            android:windowSoftInputMode="stateHidden"/>
+
+
+        <activity android:name="skate.bogota.goskate.RecyclerViews.HomeSkate"
             android:windowSoftInputMode="stateHidden"/>
     </application>
 

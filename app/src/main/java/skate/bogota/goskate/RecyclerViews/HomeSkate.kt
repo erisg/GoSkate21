@@ -1,8 +1,17 @@
 package skate.bogota.goskate.RecyclerViews
 
-import androidx.fragment.app.FragmentActivity
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import skate.bogota.goskate.R
 
-class HomeSkate : FragmentActivity() {
+class HomeSkate : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.home_skate)
+
+
+    }
 
 
 }
